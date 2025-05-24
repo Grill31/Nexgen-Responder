@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nexgen Responder</title>
+</head>
+<body>
+  <h1>West Haven Fire Dept Live Alarms</h1>
+  <div id="a91_syndication"></div>
+  <script src="https://access.active911.com/interface/js.php?r3vd10ca" type="text/javascript"></script>
+  <script type="text/javascript">
+    try {
+      a91.init({
+        'api_key': 'YOUR_GOOGLE_MAPS_API_KEY',  // Replace this with your real API key
+        'show_alarm_titles': true,
+        'show_alarm_addresses': true,
+        'abbreviate_addresses': false
+      });
+    } catch(e) {}
+  </script>
+</body>
+</html>
