@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="60">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>West Haven Fire Dept - Live Alarms</title>
+
+  <style>
+    body {
+      background-color: #000000;
+      color: #FFFFFF;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #FFFF00;
+      text-align: center;
+      padding: 10px;
+      background-color: #0000FF;
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    th {
+      background-color: #0000FF;
+      color: #FFFF00;
+      text-align: left;
+      padding: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 8px;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+
+    tr:nth-child(even) {
+      background-color: #111111;
+    }
+
+    #a91_syndication {
+      margin: 20px auto;
+      width: 95%;
+    }
+
+    /* Styling for Active911-injected rows */
+    .a91_alarm {
+      border-bottom: 1px solid #333;
+      padding: 10px;
+    }
+
+    .a91_alarm .a91_time {
+      font-style: italic;
+      color: #FF8000;
+    }
+
+    .a91_alarm .a91_title {
+      font-weight: bold;
+      color: #80FF00;
+    }
+
+    .a91_alarm .a91_address {
+      color: #FFFFFF;
+    }
+
+    .a91_alarm:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>West Haven Fire Dept - Live Alarms</h1>
+
+  <div id="a91_syndication"></div>
+
+  <script src="https://access.active911.com/interface/js.php?r3vd10ca" type="text/javascript"></script>
+  <script type="text/javascript">
+    try {
+      a91.init({
+        'api_key': 'YOUR_GOOGLE_MAPS_API_KEY', // Replace with your real Google Maps API key
+        'show_alarm_titles': true,
+        'show_alarm_addresses': true,
+        'abbreviate_addresses': false
+      });
+    } catch(e) {}
+  </script>
+</body>
+</html>
